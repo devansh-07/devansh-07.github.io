@@ -5,17 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="icon" href="static/img/icon.png">
-        <script src="script.js"></script>
+        <script>
+            function showPage(){
+                var bd = document.getElementsByTagName('body')[0];
+                bd.style.borderWidth = '0px';
+                document.getElementById("page").style.display = "block";
+                document.getElementById("preloader").style.display = "none";
+                document.getElementById("txtt").innerHTML = "";
+            }
+        </script>
         <link rel="stylesheet" type="text/css" href="static/style.css">
-        <title>Home | Devansh Soni</title>
-    </head>
-    <body onload="showPage()">
-
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+        <title>Home | Devansh Soni</title>
+    </head>
+    <body onload="showPage()">
         <div class="d-flex justify-content-center">
             <h2 id="txtt" class="text-danger", style="font-family: 'Source Code Pro', monospace; font-size: 28px;">Devansh Soni</h2>
             <div id="preloader"></div>
