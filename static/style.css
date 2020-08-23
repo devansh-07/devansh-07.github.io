@@ -1,0 +1,46 @@
+body {
+	background-color: #171717;
+	border-color: #dc3545;
+	border-width: 1px;
+	border-style: solid;
+    height: 100vh;
+    margin: 0;
+}
+
+#intro{
+	display: block;
+}
+
+.navcustom { 
+	background-color: #141414;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#preloader {
+    position: absolute;
+    top: 50%;
+    width: 38px;
+    height: 38px;
+    border: #dc3545 2px solid;
+    border-top-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: rotate 1s linear infinite;
+}
+
+#txtt {
+	position: absolute;
+    top: 50%;
+    margin-top: -60px;
+}
+
+#page{
+    display: none;
+}
