@@ -1,4 +1,4 @@
-![Devansh Soni](static/img/main.png?raw=true "Devansh Soni")
+<p align="center"> <img src="static/img/main.png" alt="devansh-07" /> </p>
 
 ### https://devansh-07.github.io
 
