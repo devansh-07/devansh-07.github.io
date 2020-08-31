@@ -1,5 +1,6 @@
-<p align="center"> <img src="static/img/main.png" alt="devansh-07" /> </p>
+<p align="left"> <img src="static/img/main.png" alt="devansh-07" /> </p>
+<p align="left"> <h2>devansh-07.github.io</h2> </p>
+<p align="left"> Devansh Soni</p>
 
-### https://devansh-07.github.io
-
-This is a repository containing all files related to my website [https://devansh-07.github.io/](https://devansh-07.github.io/)
+> Python Developer | Linux Enthusiast
+> Make it work, make it right, make it fast.
