@@ -1,12 +1,10 @@
 <p align="left">
   <img src="static/img/main.png" alt="devansh-07"/>
-  <h2><a href="devansh-07.github.io">devansh-07.github.io</a></h2>
-  Devansh Soni (devansh-07)
+  <h2>Devansh Soni</h2>
+  <h3><a href="devansh-07.github.io">devansh-07.github.io</a>(devansh-07)</h3>
 </p>
 
 > Python Developer | Linux Enthusiast
-
-> Make it work, make it right, make it fast.
 
 <h3>Table of Contents</h3>
 
