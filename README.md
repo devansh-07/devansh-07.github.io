@@ -1,7 +1,8 @@
 <p align="left">
   <img src="static/img/main.png" alt="devansh-07"/>
   <h2>Devansh Soni</h2>
-  <h3><a href="devansh-07.github.io">devansh-07.github.io</a>(devansh-07)</h3>
+  <h3 class="text-gray">devansh-07</h3>
+  <h3><a href="devansh-07.github.io">devansh-07.github.io</a></h3>
 </p>
 
 > Python Developer | Linux Enthusiast
