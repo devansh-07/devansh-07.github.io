@@ -5,6 +5,7 @@
 </p>
 
 > Python Developer | Linux Enthusiast
+
 > Make it work, make it right, make it fast.
 
 <h3>Table of Contents</h3>
