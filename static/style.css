@@ -404,20 +404,20 @@ label:active:after {
 }
 
 .resume-div {
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: black;
 }
 
 .resume-png {
-  border-radius: 20px;
+  border-radius: 10px;
   transition: 200ms;
 }
 
 .link {
   height: 50px;
   width: 50px;
-  top: 81px;
-  left: 150px;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
   opacity: 0;
   position: absolute;
   transition: 200ms;
