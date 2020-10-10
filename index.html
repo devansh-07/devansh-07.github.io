@@ -3,86 +3,470 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Developer portfolio for Devansh Soni that showcases his skills, social-handles, achievements and resume.">
+        <meta name="keywords" content="devansh-07, devansh07, dsoni_01, Devansh, Devansh Soni, devansh">
+        <meta name="author" content="Devansh Soni">
         <meta name="google-site-verification" content="6QESXRA7jMAQByUWKtJ21LUKaEUntDaBFZC-hN3MH94" />
-        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="static/bootstrap.min.css">
         <link rel="icon" href="static/img/icon.png">
         <link rel="stylesheet" type="text/css" href="static/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
-        <script type="text/javascript" src="script.js"></script>
-        <title>Home | Devansh Soni</title>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="static/script.js"></script>
+        <title>Devansh Soni's Portfolio</title>
     </head>
     <body onload="showPage()">
-        <div class="d-flex justify-content-center">
-            <h2 id="txtt" class="text-danger", style="font-family: 'Source Code Pro', monospace; font-size: 28px;">Devansh Soni</h2>
+
+        <!-- Preloader start -->
+
+        <div class="d-flex justify-content-center" id="prex" style="width: 100%; height: 100vh;">
+            <h2 id="txtt" class="text-danger", style="font-family: 'kalam', cursive; font-size: 2em;">Devansh Soni</h2>
             <div id="preloader"></div>
         </div>
 
+        <script type="text/javascript">
+        	var bgh = document.getElementById('prex');
+        	if (localStorage.getItem('mode') == 'dark')
+        	{
+        		bgh.style.backgroundColor = '#191919';
+        	}
+        	else {
+        		bgh.style.backgroundColor = '#f3f3f3';
+        	}
+        </script>
+
+        <!-- Preloader end -->
+
         <div id="page">
             <!-- NavBar Start -->
-            <nav class="navbar navbar-expand-lg navbar-dark navcustom">
-                <a class="navbar-brand text-danger py-0 pb-1" style="font-family: 'Exo 2', sans-serif; font-size: 22px;" href="index.html">Devansh Soni</a>
+            <nav id="NavBar" class="navbar navbar-expand-lg navbar-light lightnav" style="position: fixed; width: 100%; z-index: 9; line-height: 2.125em;">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a id="brand" class="navbar-brand py-0 px-2 pt-2" style="font-family: 'Kalam', cursive; font-size: 2.25em;" href="#top">
+                    <span class="font-weight-bold">D</span>S
+                </a>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: 'Work Sans', sans-serif; font-size: 16px;">
-                    <ul class="navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: 'Noto Sans', sans-serif; font-size: 1em;">
+                    <ul id="navList" class="navbar-nav ml-auto mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link mr-3 active" href="index.html">Home</a>
+                            <a class="nav-link mr-3" href="#top">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3" href="education.html">Education</a>
+                            <a class="nav-link mr-3" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3" href="projects.html">Projects</a>
+                            <a class="nav-link mr-3" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3" target="_blank" href="Resume.pdf">Resume</a>
+                            <a class="nav-link mr-3" href="#edu-n-certs">Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3" href="contact.html">Contact Me</a>
+                            <a class="nav-link mr-3" href="#resume">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-3" href="#contact">Contact Me</a>
                         </li>
                     </ul>
                 </div>
+
+            	<input type="checkbox" id="switch"/>
+            	<label for="switch"></label>
             </nav>
-            <hr class="w-100 my-0 bg-danger">
+            <hr class="w-100 my-0 bg-dark">
 
             <!-- NavBar End -->
 
-            <div class="container text-center my-5">
-                <img class="mt-5" src="static/img/main.png", width="160px", height="160px">
-                <h1 id="intro" class="text-center text-danger mt-5 mx-3", style="font-family: 'Exo 2', sans-serif; font-size: 40px;">Hello, I'm Devansh Soni!</h1>
+            <div id="about" style="min-height: 100vh; padding-top: 9%;">
+                <div class="text-dark container-fluid">
+                    <div class="row mx-0">
+                        <div class="col-lg-5 col-sm-12 col-md-12 my-5">
+                            <div class="imgonly d-flex justify-content-center m-2">
+                                <div class="p-2 outerborder" style="width: 100%; height: 100%; min-width: 250px; min-height: 250px; max-width: 460px; max-height: 460px;">
+                                    <div class="p-3 test">
+                                        <img class="img" src="static/img/main.png" width="100%" height="100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-12 col-md-12 d-flex justify-content-center my-auto">
+                            <div class="my-5">
+                                <h1 id="intro" class="mx-0", style="font-family: 'Nunito', sans-serif; font-size: 2.6em;">Hello, I'm Devansh Soni!</h1>
 
-                <div class="container text-white text-center mt-0 mb-4">
-                    <p style="font-family: 'Work Sans', sans-serif; font-size: 22px; color: #c0c0c0;">
-                        Python Developer || Linux Enthusiast
-                    </p>    
-                </div>
+                                <div class="mt-0 mb-4 mx-0">
+                                    <p style="font-family: 'Nunito', sans-serif; font-size: 1.5em;">
+                                        Python Developer || Linux Enthusiast
+                                    </p>    
+                                </div>
 
-                <hr class="w-25 col-lg-1 mx-auto bg-dark">
+                                <hr class="mx-0 bg-dark" style="width: 20%;">
 
-                <div class="container-fluid text-white d-flex justify-content-center mt-4">
-                    <div class="col-10 col-lg-6 col-md-10 col-sm-10">
-                        <p style="font-family: 'Work Sans', sans-serif; font-size: 16px; overflow-wrap: break-word;">
-                            I'm also an Open Source Enthusiast, who is always curious to learn and build new things.
-                            <br>
-                            I love reading Books, listening Music and playing Boardgames.
-                            <br>
-                            Check out my academic <a style="text-decoration: none;" class="text-info" href="resume.html">Resume</a>.
-                            <br>
-                            I'm looking for an opportunity to utilize my skills in a professional work environment.
-                        </p>    
+                                <div class=" mt-4 mx-0">
+                                    <p style="font-family: 'Nunito', sans-serif; font-size: 1.05em; overflow-wrap: break-word;">
+                                        I'm also an <span class="text-danger">Open Source Enthusiast</span>, who is always <span class="text-dark-green">curious to learn and build</span> new things.
+                                        <br>
+                                        I love reading <span class="text-dark-green">Books</span>, listening <span class="text-orange">Music and playing Boardgames</span>.
+                                        <br>
+                                        Check out my academic <a style="text-decoration: underline;" class="text-danger" href="static/Resume.pdf">Resume</a>.
+                                        <br>
+                                        I'm looking for an <span class="text-orange">opportunity</span> to utilize <span class="text-danger">my skills</span> in a <span class="text-dark-green">professional work environment</span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <footer class="fixed-bottom p-0 text-white text-center" style="background-color: #141414;">
-                <hr class="w-100 my-0 bg-danger">
-                <h6 class="pt-1 pb-1 my-auto" style="font-family: 'Work Sans', sans-serif; font-size: 12px;" >Made with ❤️ by <span style="color: orange;">De</span><span class="text-white">van</span><span class="text-success">sh</span></h6>
-            </footer>
+            <div id="skills" class="text-dark container my-0" style="padding-top: 5%;">
+                <div class="mx-2">
+                    <h4 style="font-family: 'Kalam', cursive; font-size: 1.85em;" class="m-0 text-left">Skills</h4>
+                    <hr class="w-25 col-lg-1 col-sm-1 col-1 col-md-1 mx-0 bg-dark">
+
+                    <div class="row" style="font-family: 'Noto Sans', sans-serif;">
+                        <div class="col-lg-4">
+                            <div class="card light-card custom-card-light mx-1 my-3">
+                                <div id="cardBody" class="card-body p-3" style="">
+                                    <h5 class="card-title" style="font-size: 1em;">
+                                        <span class=""></span>
+                                        <span>✧ C/C++</span>
+                                    </h5>
+                                    <h6 style="font-size: .8em;" class="card-subtitle">(Basic computer programming)</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="card light-card custom-card-light mx-1 my-3">
+                                <div id="cardBody" class="card-body p-3" style="">
+                                    <h5 class="card-title" style="font-size: 1em;">
+                                        <span class=""></span>
+                                        <span>✧ Desktop App Development</span>
+                                    </h5>
+                                    <h6 style="font-size: .8em;" class="card-subtitle">(Tkinter - Python)</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card light-card custom-card-light mx-1 my-3">
+                                <div id="cardBody" class="card-body p-3" style="">
+                                    <h5 class="card-title" style="font-size: 1em;">
+                                        <span class=""></span>
+                                        <span>✧ Web Development</span>
+                                    </h5>
+                                    <h6 style="font-size: .8em;" class="card-subtitle">(HTML/CSS/JavaScript)</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="card light-card custom-card-light mx-1 my-3">
+                                <div id="cardBody" class="card-body p-3" style="">
+                                    <h5 class="card-title" style="font-size: 1em;">
+                                        <span class=""></span>
+                                        <span>✧ Backend Python Frameworks</span>
+                                    </h5>
+                                    <h6 style="font-size: .8em;" class="card-subtitle">(Flask/Django)</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card light-card custom-card-light mx-1 my-3">
+                                <div id="cardBody" class="card-body p-3" style="">
+                                    <h5 class="card-title" style="font-size: 1em;">
+                                        <span class=""></span>
+                                        <span>✧ Version Control System</span>
+                                    </h5>
+                                    <h6 style="font-size: .8em;" class="card-subtitle">(Git/Github)</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card light-card custom-card-light mx-1 my-3">
+                                <div id="cardBody" class="card-body p-3" style="">
+                                    <h5 class="card-title" style="font-size: 1em;">
+                                        <span class=""></span>
+                                        <span>✧ Database Management System</span>
+                                    </h5>
+                                    <h6 style="font-size: .8em;" class="card-subtitle">(SQLite, MySQL)</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="text-dark container my-4" style="padding-top: 5%;">
+                <div class="mx-2">
+                    <h4 style="font-family: 'Kalam', cursive; font-size: 1.85em;" class="mx-0 text-left">Projects</h4>
+                    <hr class="w-25 col-lg-1 col-sm-1 col-1 col-md-1 ml-0 bg-dark">
+
+                    <p class="text-left mx-0" style="font-family: 'Nunito', sans-serif; font-size: 1.05em; overflow-wrap: break-word;">
+                        My projects makes use of variety of latest technology tools. My best experience is to create Flask projects and deploy them. Here are my six recent Projects.
+                    </p>    
+
+                    <div class="row" style="font-family: 'Noto Sans', sans-serif;">
+                        <div class="card custom-card-light light-card mx-3 my-3" style="width: 100%;">
+                            <div class="card-body" style="max-height: 320px;">
+                                <h5 class="card-title" style="font-size: 1.15em;">
+                                    <span class="repos repo-dark"></span>
+                                    <span>PDF Guard</span>
+                                </h5>
+                                <h6 style="font-size: 0.875em;" class="card-subtitle mb-2 text-muted">Updated on Sep 12, 2020</h6>
+                                <p class="card-text" style="font-size: 0.875em;">A web application that allows users to encrypt and decrypt their PDF files online.</p>
+                                <a href="https://github.com/devansh-07/PDF-Guard" class="card-link text-info">&lt;/&gt; Code</a>
+                                <a href="https://pdfguard.herokuapp.com/" class="card-link text-info">Visit website</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-family: 'Noto Sans', sans-serif;">
+                        <div class="card custom-card-light light-card mx-3 my-3" style="width: 100%;">
+                            <div class="card-body" style="max-height: 320px;">
+                                <h5 class="card-title" style="font-size: 1.15em;">
+                                    <span class="repos repo-dark"></span>
+                                    <span>URL Shortening Service</span>
+                                </h5>
+                                <h6 style="font-size: 0.875em;" class="card-subtitle mb-2 text-muted">Updated on Aug 7, 2020</h6>
+                                <p class="card-text" style="font-size: 0.875em;">This is a URL Shortening Service created with Flask and deployed to Heroku.</p>
+                                <a href="https://github.com/devansh-07/URL-Shortening-Service" class="card-link text-info">&lt;/&gt; Code</a>
+                                <a href="https://urlmap.herokuapp.com/" class="card-link text-info">Visit website</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-family: 'Noto Sans', sans-serif;">
+                        <div class="card custom-card-light light-card mx-3 my-3" style="width: 100%;">
+                            <div class="card-body" style="max-height: 320px;">
+                                <h5 class="card-title" style="font-size: 1.15em;">
+                                    <span class="repos repo-dark"></span>
+                                    <span>Drive Box</span>
+                                </h5>
+                                <h6 style="font-size: 0.875em;" class="card-subtitle mb-2 text-muted">Updated on Jul 23, 2020</h6>
+                                <p class="card-text" style="font-size: 0.875em;">A GUI tool which allows the user to Upload files to Drive and Download files from Drive.</p>
+                                <a href="https://github.com/devansh-07/Drive-Box" class="card-link text-info">&lt;/&gt; Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-family: 'Noto Sans', sans-serif;">
+                        <div class="card custom-card-light light-card mx-3 my-3" style="width: 100%;">
+                            <div class="card-body" style="max-height: 320px;">
+                                <h5 class="card-title" style="font-size: 1.15em;">
+                                    <span class="repos repo-dark"></span>
+                                    <span>Wikipedia Extractor</span>
+                                </h5>
+                                <h6 style="font-size: 0.875em;" class="card-subtitle mb-2 text-muted">Updated on Jul 21, 2020</h6>
+                                <p class="card-text" style="font-size: 0.875em;">This tool extracts data from Wikipedia. User can also save the data in a text or PDF file.</p>
+                                <a href="https://github.com/devansh-07/Wiki-Extractor" class="card-link text-info">&lt;/&gt; Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-family: 'Noto Sans', sans-serif;">
+                        <div class="card custom-card-light light-card mx-3 my-3" style="width: 100%;">
+                            <div class="card-body" style="max-height: 320px;">
+                                <h5 class="card-title" style="font-size: 1.15em;">
+                                    <span class="repos repo-dark"></span>
+                                    <span>YT Video Downloader</span>
+                                </h5>
+                                <h6 style="font-size: 0.875em;" class="card-subtitle mb-2 text-muted">Updated on Jul 17, 2020</h6>
+                                <p class="card-text" style="font-size: 0.875em;">This is a GUI application which can be used to download Youtube videos on your PC.</p>
+                                <a href="https://github.com/devansh-07/YouTube-Video-Downloader" class="card-link text-info">&lt;/&gt; Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="edu-n-certs" class="text-dark container" style="padding-top: 5%;">
+                <div class="row mx-0">
+                    <div class="col-lg-6 col-md-12 col-sm-12 px-0">
+                        <div id="education" class="my-4 mx-2" style="width: 100%;">
+                            <div class="mt-0 mb-5">
+                                <h4 style="font-family: 'Kalam', cursive; font-size: 1.85em;" class="mx-0 text-left">Education</h4>
+                                <hr class="w-25 col-lg-2 col-sm-1 col-1 col-md-1 ml-0 bg-dark">
+                            </div>
+
+                            <div class="history-tl-container" style="font-family: 'Noto Sans', sans-serif;">
+                                <ul class="tl">
+                                    <li class="tl-item">
+                                        
+                                    </li>
+
+                                    <li class="tl-item">
+                                        <div class="clg grad-dark"></div>
+                                        <div class="item-title" style="font-size: 1.15em; max-width: 300px;">Jabalpur Engineering College, Jabalpur</div>
+                                        <div class="item-detail" style="font-size: 0.875em;">B.Tech in Computer Science & Engineering</div>
+                                        <div class="text-muted" style="font-size: .8em;">
+                                        (2018 - Present)
+                                        </div>
+                                    </li>
+
+                                    <li class="tl-item">
+                                        <div class="schls schl-dark"></div>
+                                        <div class="item-title" style="font-size: 1.15em;">Govt. Model School</div>
+                                        <div class="item-detail" style="font-size: 0.875em;">Secondary & Sr. Secondary Education</div>
+                                        <div class="text-muted" style="font-size: .8em;">
+                                        (2013 - 2017)
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 px-0">
+                        <div id="certificates" class="mx-2 my-4" style="font-family: 'Noto Sans', sans-serif;">
+                            <div class="mt-0 mb-5">
+                                <h4 style="font-family: 'Kalam', cursive; font-size: 1.85em;" class="mx-0 text-left">Certifications</h4>
+                                <hr class="w-25 col-lg-3 col-sm-1 col-1 col-md-1 ml-0 bg-dark">
+                            </div>
+
+                            <div class="card custom-card-light light-card mx-auto my-4">
+                                <div class="card-body" style="max-height: 400px;">
+                                    <div class="">
+                                        <h5 class="card-title" style="font-size: 1.15em;">
+                                            <span class="courses course-dark"></span>
+                                            <span style="line-height: 1.5em; vertical-align: top;">Python for Everybody (Specialization)</span>
+                                        </h5>
+                                        <h6 style="font-size: .85em; color: #c0c0c0;" class="card-subtitle mb-2 text-muted">June 2020 - Aug 2020</h6>
+                                        <p class="card-text" style="font-size: .95em;">This five-course specialization covered - Python Data structures, Web scraping and crawling, Databases and a Capstone Project based on the above courses.</p>
+                                        <a class="card-link text-info" href="https://www.coursera.org/account/accomplishments/specialization/certificate/R8SH6WHRR3QR">
+                                            <span class="certs cert-dark mr-1"></span>
+                                            <span style="line-height: 1.25em; vertical-align: top; font-size: 1em;">Certificate</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card custom-card-light light-card mx-auto my-4">
+                                <div class="card-body" style="max-height: 400px;">
+                                    <div class="">
+                                        <h5 class="card-title" style="font-size: 1.15em;">
+                                            <span class="courses course-dark"></span>
+                                            <span style="line-height: 1.5em; vertical-align: top;">Python 3 Programming (Specialization)</span>
+                                        </h5>
+                                        <h6 style="font-size: .85em; color: #c0c0c0;" class="card-subtitle mb-2 text-muted">June 2020 - July 2020</h6>
+                                        <p class="card-text" style="font-size: .95em;">This specialization consisted of five courses covering - Python basics, Classes and Inheritance, Data processing and a final project on Image Processing.</p>
+                                        <a class="card-link text-info" href="https://www.coursera.org/account/accomplishments/specialization/certificate/F7P6G6W7RMW3">
+                                            <span class="certs cert-dark mr-1"></span>
+                                            <span style="line-height: 1.25em; vertical-align: top; font-size: 1em;">Certificate</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card custom-card-light light-card mx-auto my-4">
+                                <div class="card-body" style="max-height: 400px;">
+                                    <div class="">
+                                        <h5 class="card-title" style="font-size: 1.15em;">
+                                            <span class="courses course-dark"></span>
+                                            <span style="line-height: 1.5em; vertical-align: top;">Google IT Automation with Python (Specialization)</span>
+                                        </h5>
+                                        <h6 style="font-size: .85em; color: #c0c0c0;" class="card-subtitle mb-2 text-muted">May 2020 - June 2020</h6>
+                                        <p class="card-text" style="font-size: .95em;">This six-course specialization covered - Python, Git, Troubleshooting and Debugging, Cloud Management and Automation and a Final Project based on the above courses.</p>
+                                        <a class="card-link text-info" href="https://www.coursera.org/account/accomplishments/specialization/certificate/8WCSFFA2GECF">
+                                            <span class="certs cert-dark mr-1"></span>
+                                            <span style="line-height: 1.25em; vertical-align: top; font-size: 1em;">Certificate</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resume" class="text-dark container my-4" style="padding-top: 5%;">
+                <div class="mx-2">
+                    <h4 style="font-family: 'Kalam', cursive; font-size: 1.85em;" class="mx-0 text-left">Resume</h4>
+                    <hr class="w-25 col-lg-1 col-sm-1 col-1 col-md-1 mx-0 bg-dark">
+
+                    <div class="row mx-0">
+	                	<div class="col-lg-4 col-sm-12 col-md-6 mt-4 mb-0 mx-0 px-0">
+	                		<div class="resume-div" style="height: 213px; width: 350px;">
+		                		<a class="resume" target="_blank" href="static/Resume.pdf">
+		                			<img class="resume-png" loading="lazy" src="static/img/resume-img.png" height="100%">
+		                			<span class="link"></span>
+		                		</a>
+		                	</div>
+	                	</div>
+
+                        <div class="col-lg-1 col-sm-0 col-md-1">
+                            
+                        </div>
+
+	                	<div class="col-lg-7 col-sm-12 col-md-5 mt-4 mb-0 mx-0 px-0">
+	                		<p class="my-4" style="font-family: 'Nunito', sans-serif; font-size: 1.05em;">
+	                			You can download PDF version of my Resume here.
+	                		</p>
+
+	                		<a href="static/Resume.pdf" style="text-decoration: none;">
+	                			<button id="res-btn" class="my-3 btn btn-sm btn-outline-dark" style="border-radius: 4px;">Download Resume</button>
+	                		</a>
+	                	</div>
+	                </div>
+                </div>
+            </div>
+
+            <div id="contact" class="text-dark container my-4 pb-4" style="padding-top: 5%;">
+                <div class="mx-2">
+                    <h4 style="font-family: 'Kalam', cursive; font-size: 1.85em;" class="mx-0 text-left">Contact Me</h4>
+                    <hr class="w-25 col-lg-1 col-sm-1 col-1 col-md-1 ml-0 bg-dark">
+
+                    <div class="my-4">
+	                    <p style="font-family: 'Nunito', sans-serif; font-size: 1.375em;">
+			                Don't be a stranger, just say <span class="text-success">Hello</span><span class="hand">👋🏼</span>
+			            </p>
+
+	                    <p class="text-left mx-0" style="font-family: 'Nunito', sans-serif; font-size: 1em; overflow-wrap: break-word;">
+	                    	Feel free to get in touch with me. I am always open to discussing new projects or creative ideas. I am available on almost every social media platform. Drop me a message and I will respond as soon as I can.
+	                    </p>
+	                </div>
+
+                    <div>
+				        <div id="social" class="my-5">
+				            <a id="git" href="https://github.com/devansh-07" title="Github" target="_blank" rel="noopener noreferrer" style="text-decoration: none;", class="git-dark m-0">
+				                
+				            </a>
+
+				            <a id="linkedin" href="https://www.linkedin.com/in/devansh-soni-4129171a9/" title="Linkedin" target="_blank" rel="noopener noreferrer", style="text-decoration: none;", class="linkedin-dark">
+				            </a>
+
+				            <a id="insta" href="https://www.instagram.com/dsoni_01" title="Instagram" target="_blank" rel="noopener noreferrer", style="text-decoration: none;", class="insta-dark">
+				                
+				            </a>
+						</div>
+    				</div>
+
+    				<div style="font-family: 'Nunito', sans-serif;">
+    					<p class="text-left mx-0" style="font-size: 0.985em; overflow-wrap: break-word;">
+							You can also reach out to me at <span class="text-success">sonidev0201@gmail.com</span>
+						</p>
+
+						<p style="font-size: 1.25em;">
+				            Let's do something amazing.
+				        </p>
+    				</div>
+                </div>
+            </div>
+
+            <div class="text-dark container my-5 pt-5">
+                <div class="mx-2">
+                    <p class="text-left text-muted mx-0" style="font-family: 'Nunito', sans-serif; font-size: 0.75em; overflow-wrap: break-word;">
+                    	Licensed under MIT.
+                    	<br>
+                    	Copyright 2020 Devansh Soni.
+                    	<br>
+                    	Made with Love in India 🇮🇳
+	               </p>
+                </div>
+            </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
