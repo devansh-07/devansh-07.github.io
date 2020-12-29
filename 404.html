@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Developer portfolio for Devansh Soni that showcases his skills, social-handles, achievements and resume.">
+        <meta name="keywords" content="devansh-07, devansh07, dsoni_01, Devansh, Devansh Soni, devansh">
+        <meta name="author" content="Devansh Soni">
+        <meta name="google-site-verification" content="6QESXRA7jMAQByUWKtJ21LUKaEUntDaBFZC-hN3MH94" />
+        <link rel="stylesheet" href="static/bootstrap.min.css">
+        <link rel="icon" href="static/img/icon.png">
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="static/script.js"></script>
+        <title>Devansh Soni's Portfolio</title>
+    </head>
+    <body onload="show404()">
+
+        <!-- Preloader start -->
+
+        <div class="d-flex justify-content-center" id="prex" style="width: 100%; height: 100vh;">
+            <h2 id="txtt" class="text-danger", style="font-family: 'kalam', cursive; font-size: 2em;">Devansh Soni</h2>
+            <div id="preloader"></div>
+        </div>
+
+        <script type="text/javascript">
+        	var bgh = document.getElementById('prex');
+        	if (localStorage.getItem('mode') == 'dark')
+        	{
+        		bgh.style.backgroundColor = '#191919';
+        	}
+        	else {
+        		bgh.style.backgroundColor = '#f3f3f3';
+        	}
+        </script>
+
+        <!-- Preloader end -->
+
+        <div id="page">
+
+            <!-- NavBar Start -->
+
+            <nav id="NavBar" class="navbar navbar-expand-lg navbar-light lightnav" style="position: fixed; width: 100%; z-index: 1; line-height: 2.125em;">
+                <a id="brand" class="navbar-brand py-0 px-2 pt-2" style="font-family: 'Kalam', cursive; font-size: 2.25em;" href="index.html">
+                    <span class="font-weight-bold">D</span>S
+                </a>
+
+                <div class="collapse navbar-collapse" style="font-family: 'Noto Sans', sans-serif; font-size: 1em;">
+                </div>
+
+                <input type="checkbox" id="switch"/>
+                <label for="switch"></label>
+            </nav>
+
+            <!-- NavBar End -->
+
+            <div id="404" style="min-height: 100vh; padding-top: 5%;">
+                <div class="my-5">
+                    <div class="imgonly d-flex justify-content-center m-2">
+                        <div class="p-3">
+                            <img class="" style="border-radius: 50%;" src="static/img/404.png" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid text-dark">
+                    <div class="text-center d-flex justify-content-center my-auto">
+                        <div class="my-5">
+                            <h1 id="intro" class="mx-0", style="font-family: 'Nunito', sans-serif; font-size: 2.6em;">
+                                <span>Uh oh! 404!</span>
+                            </h1>
+
+                            <div class="mt-0 mb-4 mx-0">
+                                <p style="font-family: 'Nunito', sans-serif; font-size: 1.5em;">
+                                    <span class="text-danger">Looks like Thanos wiped away this page too.</span>
+                                    <br>
+                                    <span>Try going back to the previous page or go to <a style="text-decoration: underline;" class="text-danger" href="index.html">Homepage</a>.</span>
+                                </p>    
+                            </div>
+
+                            <div class=" mt-4 mx-0">
+                                <p style="font-family: 'Nunito', sans-serif; font-size: 1.05em; overflow-wrap: break-word;">
+                                    Page not found
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

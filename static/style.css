@@ -400,17 +400,21 @@ label:active:after {
 }
 
 .resume {
+  border-radius: 10px;
   text-decoration: none;
 }
 
 .resume-div {
   border-radius: 10px;
+  overflow: hidden;
   background-color: black;
 }
 
 .resume-png {
   border-radius: 10px;
   transition: 200ms;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 .link {
