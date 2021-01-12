@@ -42,6 +42,12 @@ function darkMode(){
 	var resumebtn = document.getElementById('res-btn');
 	var insta = document.getElementById('insta');
 	var linkedin = document.getElementById('linkedin');
+	var web = document.getElementById('web');
+	var backend = document.getElementById('backend');
+	var dbms = document.getElementById('dbms');
+	var vcs = document.getElementById('vcs');
+	var desk_app = document.getElementById('desk_app');
+
 
 	var containers = document.getElementsByClassName('container');
 	var fluidContainers = document.getElementsByClassName('container-fluid');
@@ -54,6 +60,12 @@ function darkMode(){
 	git.classList.replace("git-dark", "git")
 	insta.classList.replace("insta-dark", "insta")
 	linkedin.classList.replace("linkedin-dark", "linkedin")
+	
+	web.classList.replace("web-dark", "web")
+	backend.classList.replace("backend-dark", "backend")
+	dbms.classList.replace("dbms-dark", "dbms")
+	desk_app.classList.replace("desk_app-dark", "desk_app")
+	vcs.classList.replace("vcs-dark", "vcs")
 
 	body.style.backgroundColor = '#191919';
 	body.style.backgroundImage = "url('static/img/grid-dark.svg')";
@@ -95,6 +107,7 @@ function darkMode(){
 
 
 function lightMode(){
+	console.log('Light Mode')
 	var body = document.getElementsByTagName('body')[0];
 	var horSep = document.getElementsByTagName('hr');
 	var nav = document.getElementById('NavBar');
@@ -108,6 +121,11 @@ function lightMode(){
 	var resumebtn = document.getElementById('res-btn');
 	var insta = document.getElementById('insta');
 	var linkedin = document.getElementById('linkedin');
+	var web = document.getElementById('web');
+	var backend = document.getElementById('backend');
+	var dbms = document.getElementById('dbms');
+	var vcs = document.getElementById('vcs');
+	var desk_app = document.getElementById('desk_app');
 
 	var containers = document.getElementsByClassName('container');
 	var fluidContainers = document.getElementsByClassName('container-fluid');
@@ -123,6 +141,11 @@ function lightMode(){
 	git.classList.replace("git", "git-dark")
 	insta.classList.replace("insta", "insta-dark")
 	linkedin.classList.replace("linkedin", "linkedin-dark")
+	web.classList.replace("web", "web-dark")
+	backend.classList.replace("backend", "backend-dark")
+	dbms.classList.replace("dbms", "dbms-dark")
+	vcs.classList.replace("vcs", "vcs-dark")
+	desk_app.classList.replace("desk_app", "desk_app-dark")
 
 	for (var hr of horSep)
 		hr.classList.replace("bg-light", "bg-dark");
