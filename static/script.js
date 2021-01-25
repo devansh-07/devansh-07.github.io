@@ -107,7 +107,6 @@ function darkMode(){
 
 
 function lightMode(){
-	console.log('Light Mode')
 	var body = document.getElementsByTagName('body')[0];
 	var horSep = document.getElementsByTagName('hr');
 	var nav = document.getElementById('NavBar');
