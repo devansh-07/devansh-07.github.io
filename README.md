@@ -1,5 +1,4 @@
 <p align="left">
-  <img src="static/img/main.png" alt="devansh-07"/>
   <h2>Devansh Soni (devansh-07)</h2>
   <h3><a href="https://devansh-07.github.io">devansh-07.github.io</a></h3>
 </p>
