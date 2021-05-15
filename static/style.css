@@ -104,6 +104,7 @@ body {
 }
 
 .img {
+  border-radius: 50%;
   -webkit-animation: rotatecc 2s linear infinite;
 }
 
