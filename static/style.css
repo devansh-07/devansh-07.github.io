@@ -16,6 +16,10 @@ body {
   transition: 200ms background ease-in;
 }
 
+.card {
+    cursor: pointer;
+}
+
 @media (min-width: 644px){
   body {
     font-size: 16px;
@@ -42,17 +46,17 @@ body {
   font-weight: bold;
 }
 
-.darknav { 
+.darknav {
 	background-color: #141414;
   transition: all 200ms ease-in-out;
 }
 
-.lightnav { 
+.lightnav {
   background-color: #e0e0e0;
   transition: all 200ms ease-in-out;
 }
 
-.selected { 
+.selected {
   font-weight: bold;
   font-size: 1.125em;
 }
@@ -99,7 +103,7 @@ body {
   border: #dc3545 3px solid;
   border-radius: 50%;
   border-left-color: transparent;
-  border-right-color: transparent; 
+  border-right-color: transparent;
   -webkit-animation: rotate 4s linear infinite;
 }
 
@@ -442,7 +446,7 @@ body {
   }
 
   50% {-webkit-transform: rotate(25deg);
-  } 
+  }
 
   100% {-webkit-transform: rotate(0deg);
   }
